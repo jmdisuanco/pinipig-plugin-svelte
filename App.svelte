@@ -1,7 +1,7 @@
 <script>
   export let setPage;
   export let payload;
-  import routes from "./generated/routes";
+  import routes from "../../svelte/generated/routes";
   import state from "./state";
 
   const getRoute = routes => route => {
