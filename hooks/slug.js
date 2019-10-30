@@ -1,4 +1,4 @@
-const App = require('../../svelte/.generated/ssr.js')
+const App = require('../../svelte/generated/ssr.js')
 const serverApp = require('../svelte/serverApp')
 const stringify = require('fast-stringify').default
 
