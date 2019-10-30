@@ -1,0 +1,36 @@
+{
+  "version": "0.1",
+  "name": "pinipigSvelte",
+  "pluginVersion": "0.0.1",
+  "folderName": "svelte",
+  "devDependencies": [
+    "@fullhuman/postcss-purgecss",
+    "npm-run-all",
+    "postcss-cli",
+    "rollup",
+    "rollup-plugin-commonjs",
+    "rollup-plugin-livereload",
+    "rollup-plugin-node-resolve",
+    "rollup-plugin-svelte",
+    "rollup-plugin-terser",
+    "svelte",
+    "tailwindcss"
+  ],
+  "scripts": {
+    "svelteAutobuild": "rollup -c -w",
+    "svelteAutobuild:ssr": "rollup -c ./src/plugin/svelte/config/rollup.ssr.config.js -w",
+    "svelteDev": "run-p watch:routes svelteAutobuild svelteWatch:tailwind svelteAutobuild:ssr svelteStart:dev",
+    "svelteStart:dev": "nodemon ./src/index.js",
+    "build": "rollup -c",
+    "svelteBuild:ssr": "rollup -c ./src/plugin/svelte/config/rollup.ssr.config.js ",
+    "svelteWatch:tailwind": "postcss --config ./src/plugin/svelte/config public/tailwind.css -o public/index.css -w",
+    "svelteBuild:tailwind": "NODE_ENV=production postcss public/tailwind.css -o public/index.css",
+    "svelteBuild:routes": "node ./src/svelte/bin/genRoutes",
+    "svelteWatch:routes": "node ./src/svelte/bin/genRoutes -w"
+  },
+  "dependencies": "",
+  "repository": "https://github.com/jmdisuanco/pinipig-plugin-svelte",
+  "required": "",
+  "routes": {},
+  "model": {}
+}
