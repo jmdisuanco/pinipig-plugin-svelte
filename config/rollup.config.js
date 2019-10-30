@@ -8,7 +8,7 @@ import rollup_start_dev from '../bin/rollup_start_dev'
 const production = !process.env.ROLLUP_WATCH
 
 export default {
-  input: 'src/svelte/App.svelte',
+  input: 'src/plugins/svelte/App.svelte',
   output: {
     sourcemap: true,
     format: 'iife',

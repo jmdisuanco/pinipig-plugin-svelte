@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser'
 const production = !process.env.ROLLUP_WATCH
 
 export default {
-  input: 'src/svelte/App.svelte',
+  input: 'src/plugins/svelte/App.svelte',
   output: {
     sourcemap: false,
     format: 'cjs',
