@@ -3,6 +3,7 @@
   "name": "pinipigSvelte",
   "pluginVersion": "0.0.1",
   "folderName": "svelte",
+  "workingDir": "svelte",
   "devDependencies": [
     "@fullhuman/postcss-purgecss",
     "npm-run-all",
