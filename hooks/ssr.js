@@ -1,4 +1,4 @@
-const App = require('../svelte/generated/ss.js')
+const App = require('../../data/svelte/generated/ssr.js')
 const serverApp = require('../svelte/serverApp')
 const stringify = require('fast-stringify').default
 // const { streamFile } = require('pinipig')
