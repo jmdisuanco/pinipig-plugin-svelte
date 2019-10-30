@@ -10,7 +10,7 @@ export default {
   output: {
     sourcemap: false,
     format: 'cjs',
-    file: 'src/svelte/generated/ssr.js',
+    file: 'src/data/svelte/generated/ssr.js',
   },
   plugins: [
     svelte({
