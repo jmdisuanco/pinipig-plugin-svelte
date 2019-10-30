@@ -27,7 +27,7 @@ const generate = () => {
   result += '\n]\nexport default routes'
 
   fs.writeFileSync(
-    `${process.cwd()}/src/data/svelte/generated/routes.js`,
+    `${process.cwd()}/src/plugins/svelte/.generated/routes.js`,
     result,
   )
 }
