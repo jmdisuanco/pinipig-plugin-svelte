@@ -1,5 +1,5 @@
 <script>
-  import state from "../state";
+  import state from "../../plugins/svelte/state";
   let page = state.page;
 </script>
 

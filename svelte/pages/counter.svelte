@@ -1,6 +1,6 @@
 <script>
   import Header from "../components/header.svelte";
-  import state from "../state";
+  import state from "../../plugins/svelte/state";
   let counter = 0;
   let page = state.page;
 </script>

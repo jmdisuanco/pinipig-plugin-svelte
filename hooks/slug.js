@@ -1,5 +1,5 @@
-const App = require('../../svelte/generated/ssr.js')
-const serverApp = require('../svelte/serverApp')
+const App = require('../../../svelte/generated/ssr')
+const serverApp = require('../serverApp')
 const stringify = require('fast-stringify').default
 
 const slug = (page) => (ctx) => {

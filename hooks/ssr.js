@@ -1,7 +1,7 @@
-const App = require('../../svelte/generated/ssr.js')
-const serverApp = require('../svelte/serverApp')
+const App = require('../../../svelte/generated/ssr')
+const serverApp = require('../serverApp')
 const stringify = require('fast-stringify').default
-// const { streamFile } = require('pinipig')
+const { streamFile } = require('pinipig')
 
 const ssr = (ctx) => {
   try {
@@ -15,7 +15,12 @@ const ssr = (ctx) => {
 
       ctx.res.end(serverApp(head, html, css, stringify(props)))
     } else {
-      // streamFile('./public')(ctx)
+      console.log(ctx)
+      try {
+        streamFile('./public')(ctx)
+      } catch (e) {
+        console.log(e)
+      }
       res.end()
     }
   } catch (err) {
