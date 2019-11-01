@@ -11,7 +11,11 @@
       });
       return target.component;
     } catch (e) {
-      console.error(e.message, "route not found");
+      try {
+        //if running on server set header status to 404
+        ctx.res.writeStatus("404");
+      } catch (e) {}
+      page.set("/_404");
     }
   };
   const Route = getRoute(routes);

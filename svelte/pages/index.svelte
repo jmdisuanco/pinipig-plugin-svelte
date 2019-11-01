@@ -15,4 +15,4 @@
 </svelte:head>
 <Header />
 <h1>Page : {$page}!</h1>
-<div class="bg-red-300">Index</div>
+<div class="bg-green-300">Home Page</div>

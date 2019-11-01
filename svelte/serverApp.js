@@ -7,10 +7,11 @@ module.exports = (head, html, css, props) =>
     <meta name="viewport" content="width=device-width" />
     <title>Pinipig server App</title>
     ${head}
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
-    <link rel="stylesheet" href="/global.css" />
-    <link rel="stylesheet" href="/index.css" />
-    <script src="/csr.js"></script>
+    <link rel="icon" type="image/ico" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="assets/global.css" />
+    <link rel="stylesheet" href="assets/index.css" />
+    <link rel="stylesheet" href="assets/bundle.css" />
+    <script src="assets/csr.js"></script>
     <style>
       ${css.code}
     </style>

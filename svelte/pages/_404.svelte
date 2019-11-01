@@ -6,12 +6,13 @@
 
 <style>
   h1 {
-    color: purple;
+    color: red;
+    font-size: 20px;
   }
 </style>
 
+<!-- 404 -->
 <svelte:head>
-  <title>About us</title>
+  <title>404 Page not Found</title>
 </svelte:head>
-<Header />
-<h1>Page {$page}!</h1>
+<h1>Page Not found</h1>
