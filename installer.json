@@ -21,7 +21,7 @@
   "scripts": {
     "svelteAutobuild": "rollup -c ./src/plugins/svelte/config/rollup.config.js -w",
     "svelteAutobuild:ssr": "rollup -c ./src/plugins/svelte/config/rollup.ssr.config.js -w",
-    "svelteDev": "run-p svelteWatch:routes svelteAutobuild svelteWatch:tailwind svelteAutobuild:ssr",
+    "svelteDev": "run-p svelteWatch:routes svelteAutobuild svelteWatch:tailwind svelteAutobuild:ssr dev",
     "build": "rollup -c ./src/plugins/svelte/config/rollup.config.js",
     "svelteBuild:ssr": "rollup -c ./src/plugins/svelte/config/rollup.ssr.config.js ",
     "svelteWatch:tailwind": "postcss --config ./src/plugins/svelte/config public/assets/tailwind.css -o public/assets/index.css -w",
