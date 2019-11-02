@@ -3,20 +3,18 @@ const serverApp = require('../../../svelte/serverApp')
 const stringify = require('fast-stringify').default
 
 const slug = (page) => (ctx) => {
-  const { payload } = ctx
-  const { postType, slug } = ctx.parameters
-  page != undefined ? (postType = page) : null
-  payload.slug = slug //assign slug value
+  let { payload } = ctx
+  Object.assign(payload, ctx.parameters)
   try {
     let props = {
-      setPage: `/${postType}`,
+      setPage: `/${page}`,
       payload: stringify(payload),
     }
-
     const { head, html, css } = App.render(props)
 
     ctx.res.end(serverApp(head, html, css, stringify(props)))
   } catch (err) {
+    console.log(err)
     ctx.res.end(
       `<html>
           <body>Slug not Found</body>
