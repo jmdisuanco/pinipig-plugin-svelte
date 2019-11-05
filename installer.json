@@ -16,6 +16,8 @@
     "rollup-plugin-svelte",
     "rollup-plugin-terser",
     "svelte",
+    "es6-promise",
+    "isomorphic-fetch",
     "tailwindcss"
   ],
   "scripts": {
