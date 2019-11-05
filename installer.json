@@ -5,6 +5,7 @@
   "public": true,
   "folderName": "svelte",
   "workingDir": "svelte",
+  "route": "svelte",
   "devDependencies": [
     "@fullhuman/postcss-purgecss",
     "npm-run-all",
