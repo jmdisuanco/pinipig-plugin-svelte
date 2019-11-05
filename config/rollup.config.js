@@ -47,7 +47,7 @@ export default {
     !production && livereload('public'),
 
     // If we're building for production (npm run build
-    // instead of npm run dev), minify
+    // instead of npm run svelteDev), minify
     production && terser(),
   ],
   watch: {

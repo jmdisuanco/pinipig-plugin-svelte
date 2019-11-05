@@ -9,7 +9,8 @@ const ssr = (ctx) => {
   try {
     const { payload } = ctx
     let url = ctx.req.getUrl()
-    if (url.split('.').length < 2 && url != '/') {
+    if (url.split('.').length < 2) {
+      url === '/' ? (url = '/index') : null
       let props = {
         setPage: url,
         payload: stringify(payload),
