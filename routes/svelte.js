@@ -9,6 +9,10 @@ const payloader = (ctx) => {
 
 let routes = [
   {
+    url: '/',
+    GET: ssr,
+  },
+  {
     url: '/:page',
     GET: ssr,
   },
