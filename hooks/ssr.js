@@ -8,7 +8,12 @@ const static = streamFile('public')
 const ssr = (ctx) => {
   try {
     const { payload } = ctx
-    let url = ctx.req.getUrl()
+    let url = '/'
+    try {
+      url = ctx.req.getUrl()
+    } catch (e) {
+      url = ctx.payload.url
+    }
     if (url.split('.').length < 2) {
       url === '/' ? (url = '/index') : null
       let props = {
