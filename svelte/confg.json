@@ -1,0 +1,9 @@
+{
+  "tailwind": {
+    "theme": {
+      "extend": {}
+    },
+    "variants": {},
+    "plugins": []
+  }
+}
