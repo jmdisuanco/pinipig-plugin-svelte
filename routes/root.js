@@ -1,4 +1,4 @@
-const ssr = require('../hooks/ssr')
+const ssr = require('../plugins/svelte/hooks/ssr')
 const { streamFile } = require('pinipig')
 
 const getPost = async (ctx) => {
