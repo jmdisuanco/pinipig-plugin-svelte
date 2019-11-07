@@ -5,12 +5,7 @@
   let page = state.page;
   export let payload;
   let blogList;
-  let data = {
-    title: "",
-    content: "",
-    slug: ""
-  };
-
+  let data;
   const getBlogList = async () => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
     const text = await res.json();
@@ -21,14 +16,10 @@
       throw new Error(text);
     }
   };
+  blogList = getBlogList();
 
   if (payload) {
-    data = JSON.parse(payload);
-  }
-
-  if (data.slug === "") {
-    //if no payload slug property we need to list the blog index
-    blogList = getBlogList();
+    data = JSON.parse(payload).blogs;
   }
 </script>
 
@@ -39,13 +30,18 @@
 </style>
 
 <svelte:head>
-  <title>{data.slug}</title>
+  <title>Blogs</title>
 </svelte:head>
 <Header />
 
-{#if data.slug}
-  <h1>Page {$page} / {data.slug}</h1>
-  <div>{data.content}</div>
+{#if data}
+  <h1>Page {$page}</h1>
+
+  {#each data as post}
+    <div>
+      <a href="blog/{post.id}">{post.title}</a>
+    </div>
+  {/each}
 {:else}
   <div>
     {#await blogList}
@@ -53,7 +49,7 @@
     {:then posts}
       {#each posts as post}
         <div>
-          <a href="blog/{post.title.replace(/\s+/g, '-')}">{post.title}</a>
+          <a href="blog/{post.id}">{post.title}</a>
         </div>
       {/each}
     {:catch error}
