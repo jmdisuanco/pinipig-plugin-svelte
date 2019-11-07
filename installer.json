@@ -5,7 +5,7 @@
   "public": true,
   "folderName": "svelte",
   "workingDir": "svelte",
-  "routeEject": ["root"],
+  "routeEject": "root",
   "devDependencies": [
     "@fullhuman/postcss-purgecss",
     "npm-run-all",
