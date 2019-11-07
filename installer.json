@@ -5,7 +5,7 @@
   "public": true,
   "folderName": "svelte",
   "workingDir": "svelte",
-  "route": "svelte",
+  "routeEject": ["root"],
   "devDependencies": [
     "@fullhuman/postcss-purgecss",
     "npm-run-all",
@@ -22,15 +22,15 @@
     "tailwindcss"
   ],
   "scripts": {
-    "svelteAutobuild": "rollup -c ./src/plugins/svelte/config/rollup.config.js -w",
-    "svelteAutobuild:ssr": "rollup -c ./src/plugins/svelte/config/rollup.ssr.config.js -w",
-    "svelteDev": "run-p svelteWatch:routes svelteAutobuild svelteWatch:tailwind svelteAutobuild:ssr dev",
-    "build": "rollup -c ./src/plugins/svelte/config/rollup.config.js",
-    "svelteBuild:ssr": "rollup -c ./src/plugins/svelte/config/rollup.ssr.config.js ",
-    "svelteWatch:tailwind": "postcss --config ./src/plugins/svelte/config public/assets/tailwind.css -o public/assets/index.css -w",
-    "svelteBuild:tailwind": "NODE_ENV=production postcss --config ./src/plugins/svelte/config public/assets/tailwind.css -o public/assets/index.css",
-    "svelteBuild:routes": "node ./src/plugins/svelte/bin/genRoutes",
-    "svelteWatch:routes": "node ./src/plugins/svelte/bin/genRoutes -w"
+    "svelte:autobuild": "rollup -c ./src/plugins/svelte/config/rollup.config.js -w",
+    "svelte:autobuild:ssr": "rollup -c ./src/plugins/svelte/config/rollup.ssr.config.js -w",
+    "svelte:dev": "run-p svelte:watch:routes svelte:autobuild svelte:watch:tailwind svelte:autobuild:ssr dev",
+    "svelte:build": "run-s svelte:build:tailwind rollup -c ./src/plugins/svelte/config/rollup.config.js",
+    "svelte:build:ssr": "rollup -c ./src/plugins/svelte/config/rollup.ssr.config.js ",
+    "svelte:watch:tailwind": "postcss --config ./src/plugins/svelte/config public/assets/tailwind.css -o public/assets/index.css -w",
+    "svelte:build:tailwind": "NODE_ENV=production postcss --config ./src/plugins/svelte/config public/assets/tailwind.css -o public/assets/index.css",
+    "svelte:build:routes": "node ./src/plugins/svelte/bin/genRoutes",
+    "svelte:watch:routes": "node ./src/plugins/svelte/bin/genRoutes -w"
   },
   "dependencies": "",
   "repository": "https://github.com/jmdisuanco/pinipig-plugin-svelte",
