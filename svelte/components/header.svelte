@@ -15,16 +15,15 @@
   });
 </script>
 
-<header class="bg-gray-400">
-  <nav class="flex justify-between w-full bg-gray-500 text-white p-4">
+<header class="bg-purple-700">
+  <nav class="flex justify-between w-full text-white p-4">
     <a href="/">
       <span class="font-semibold text-xl tracking-tight">Pinipig</span>
     </a>
     <div class="md:items-center md:w-auto flex">
-      <div id="nav" class="md:flex hidden">
+      <div id="nav" class="flex">
         <a class="block md:text-white mr-4" href="/about">About</a>
         <a class="block md:text-white mr-4" href="/counter">Counter</a>
-        <a class="block md:text-white mr-4" href="/blog">Blog</a>
       </div>
     </div>
   </nav>

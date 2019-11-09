@@ -4,14 +4,8 @@
   let page = state.page;
 </script>
 
-<style>
-  h1 {
-    color: purple;
-  }
-</style>
-
 <svelte:head>
-  <title>About us</title>
+  <title>About</title>
 </svelte:head>
 <Header />
-<h1>Page {$page}!</h1>
+<h1 class="text-4xl">About Page</h1>

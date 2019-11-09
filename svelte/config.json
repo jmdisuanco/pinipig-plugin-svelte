@@ -1,7 +1,11 @@
 {
   "tailwind": {
     "theme": {
-      "extend": {}
+      "extend": {
+        "colors": {
+          "ube": "#110044"
+        }
+      }
     },
     "variants": {},
     "plugins": []
